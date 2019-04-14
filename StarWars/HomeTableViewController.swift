@@ -10,6 +10,8 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var speciesLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -85,7 +85,6 @@
 		B9429322225A44800063A4D5 = {
 			isa = PBXGroup;
 			children = (
-				B9153D43226396B300086F7A /* HomeTableViewController.swift */,
 				B942932D225A44800063A4D5 /* StarWars */,
 				B9429345225A44830063A4D5 /* StarWarsTests */,
 				B9429350225A44830063A4D5 /* StarWarsUITests */,
@@ -106,6 +105,7 @@
 		B942932D225A44800063A4D5 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				B9153D43226396B300086F7A /* HomeTableViewController.swift */,
 				B942932E225A44800063A4D5 /* AppDelegate.swift */,
 				B9429330225A44800063A4D5 /* ViewController.swift */,
 				B9429332225A44810063A4D5 /* Main.storyboard */,
