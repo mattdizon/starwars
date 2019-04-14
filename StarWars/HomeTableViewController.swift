@@ -9,9 +9,8 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
+    var tableArray = [[String: Any]] ()
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var speciesLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +31,24 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    func parseJson(){
+        guard let url = URL(string: "https://swapi.co/api/people/") else {return}
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let dataResponse = data,
+                error == nil else {
+                    print(error?.localizedDescription ?? "Response Error")
+                    return }
+            do{
+                //here dataResponse received from a network request
+                let jsonResponse = try JSONSerialization.jsonObject(with:
+                    dataResponse, options: [])
+                print(jsonResponse) //Response result
+            } catch let parsingError {
+                print("Error", parsingError)
+            }
+        }
+        task.resume()
     }
 
     /*
